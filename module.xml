@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<module name="4i.language.python" branch="master">
+  <module name="4i.language" required_branch="master"/>
+  
+  <node name="project" pre="project_pre.gsl">
+    <attribute name="python_version" required="True"/>
+    <node name="output" number="*" pre="output_pre.gsl" post="output_post.gsl" post_end="output_post_end.gsl" dst="#(path)#(name).py" binary="True">
+      <attribute name="name" required="True"/>
+      <node name="stmt" number="*" pre="stmt_pre.gsl" post="stmt_post.gsl"/>
+      <node name="def" number="*" pre="def_pre.gsl" post="def_post.gsl" post_end="def_post_end.gsl">
+	<attribute name="name" required="True"/>
+	<node name="arg" number="*">
+	  <attribute name="name" required="True"/>
+	</node> <!-- !arg -->
+	<node ref=":stmt"/>
+      </node> <!-- !def -->
+      <node name="class" number="*" pre="class_pre.gsl" post="class_post.gsl" post_end="class_post_end.gsl">
+	<attribute name="name" required="True"/>
+	<attribute name="inherits"/>
+	<node ref=":def"/>
+      </node> <!-- !class -->
+      <node name="main" pre="main_pre.gsl" post="main_post.gsl" post_end="main_post_end.gsl" debug="True">
+	<node ref=":stmt"/>
+	<node ref=":def"/>
+	<node ref=":class"/>
+      </node>
+    </node> <!-- !output -->
+    <node name="dir" number="*">
+      <node ref=":output"/>
+      <node ref=":dir"/>
+    </node> <!-- !dir -->
+  </node> <!-- !project -->
+
+  <test>
+    <project name="diet">
+      <class name="Diet"/>
+      <class name="Carnism" inherits="Diet"/>
+      <class name="Vegetarism" inherits="Diet"/>
+      <class name="Veganism" inherits="Diet"/>
+      <class name="Raw" inherits="Diet"/>
+    </project>
+  </test>
+</module>

@@ -1,0 +1,9 @@
+.template 0
+
+set_level()
+
+if !defined(projectnode.inherits)
+  define projectnode.inherits = 'object'
+endif
+
+.endtemplate

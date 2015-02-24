@@ -1,0 +1,9 @@
+.template 1
+.
+$(indent())class $(projectnode.name:)\
+.if defined(projectnode.inherits)
+($(projectnode.inherits:))\
+.endif
+:
+.
+.endtemplate

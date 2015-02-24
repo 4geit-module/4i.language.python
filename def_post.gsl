@@ -1,0 +1,10 @@
+.template 1
+.
+
+$(indent())def $(projectnode.name:)( \
+. for projectnode.arg as a
+$(a.name:), \
+. endfor
+):
+.
+.endtemplate

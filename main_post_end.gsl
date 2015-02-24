@@ -1,0 +1,7 @@
+.template 1
+.
+.if !count(projectnode.)
+$(indent())    pass
+.endif
+.
+.endtemplate

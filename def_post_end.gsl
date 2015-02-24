@@ -1,0 +1,6 @@
+.template 1
+.
+$(indent())    pass
+
+.
+.endtemplate
