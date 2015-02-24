@@ -1,6 +1,6 @@
 .template 1
 .
-.if !count(projectnode.)
+.if node__empty()
 $(indent())    pass
 .endif
 .

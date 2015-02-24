@@ -1,5 +1,3 @@
 .template 0
 
-echo "PYTHON OUTPUT HERE ($(projectnode.path:))"
-
 .endtemplate
