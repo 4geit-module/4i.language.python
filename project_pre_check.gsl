@@ -1,0 +1,7 @@
+.template 0
+
+if !defined(projectnode.python_version)
+  define projectnode.python_version = '2'
+endif
+
+.endtemplate

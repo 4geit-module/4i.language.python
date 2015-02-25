@@ -2,7 +2,7 @@
 <module name="4i.language.python" branch="master">
   <module name="4i.language" required_branch="master"/>
   
-  <node name="project" pre="project_pre.gsl">
+  <node name="project" pre_check="project_pre_check.gsl" pre="project_pre.gsl">
     <attribute name="python_version" required="True"/>
     <node name="output" number="*" pre="output_pre.gsl" post="output_post.gsl" post_end="output_post_end.gsl" dst="#(path)#(name).py" binary="True" debug="True">
       <attribute name="name" required="True"/>
