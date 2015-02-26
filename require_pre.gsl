@@ -1,0 +1,5 @@
+.template 0
+
+define projectnode.env = 'pip'
+
+.endtemplate

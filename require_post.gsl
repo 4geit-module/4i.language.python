@@ -1,0 +1,6 @@
+.template 1
+.
+$(projectnode.name:)\
+$(conditional__ifdef_else_empty(projectnode.version, '$(projectnode.operator?">=")$(projectnode.version)'))
+.
+.endtemplate

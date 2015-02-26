@@ -1,0 +1,15 @@
+.template 1
+.
+#!/usr/bin/env python$(project.python_version)
+
+.copyleft()
+
+from setuptools import setup, find_packages
+
+setup(
+    name = "$(project.name)",
+    version = "$(project.branch)",
+    packages = find_packages(),
+)
+.
+.endtemplate

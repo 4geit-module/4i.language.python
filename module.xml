@@ -4,6 +4,17 @@
   
   <node name="project" pre_check="project_pre_check.gsl" pre="project_pre.gsl">
     <attribute name="python_version" required="True"/>
+    <node name="setup" virtual="True" dst="setup.py" binary="True" post="setup__py.gsl"/>
+    <node name="requirements" virtual="True" copy="True" dst="requirements.txt">
+      <node name="require" number="*" pre="require_pre.gsl" post="require_post.gsl">
+	<attribute name="env"/>
+	<attribute name="dev"/>
+	<attribute name="name" required="True"/>
+	<attribute name="operator"/>
+	<attribute name="version"/>
+	<attribute name="variable"/>
+      </node>
+    </node>
     <node name="output" number="*" pre="output_pre.gsl" post="output_post.gsl" post_end="output_post_end.gsl" dst="#(path)#(name).py" binary="True" debug="True">
       <attribute name="name" required="True"/>
       <node name="stmt" number="*" pre="stmt_pre.gsl" post="stmt_post.gsl"/>
