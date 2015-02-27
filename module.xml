@@ -25,8 +25,9 @@
 	<attribute name="variable"/>
       </node>
     </node>
-    <node name="output" number="*" pre="output_pre.gsl" post="output_post.gsl" post_end="output_post_end.gsl" dst="#(path)#(name).py" binary="True" debug="True">
+    <node name="output" number="*" pre="output_pre.gsl" post="output_post.gsl" post_end="output_post_end.gsl" dst="#(path)#(name).py" debug="True">
       <attribute name="name" required="True"/>
+      <attribute name="binary" type="boolean"/>
       <node name="stmt" number="*" pre="stmt_pre.gsl" post="stmt_post.gsl"/>
       <node name="def" number="*" pre="def_pre.gsl" post="def_post.gsl" post_end="def_post_end.gsl">
 	<attribute name="name" required="True"/>
