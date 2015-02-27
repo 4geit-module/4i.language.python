@@ -1,6 +1,8 @@
 .template 1
 .
-    pass
+.if node__empty()
+$(indent())    pass
+.endif
 
 .
 .endtemplate
