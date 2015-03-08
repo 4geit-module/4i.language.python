@@ -1,0 +1,21 @@
+.template 1
+.
+#!/bin/bash
+
+.copyleft()
+
+pushd $(global.build_path:)
+
+virtualenv$(project.python_version) .
+source bin/activate
+
+pip install --upgrade pip
+pip install --allow-all-external -r requirements.txt
+.
+\./build.sh
+
+deactivate
+
+popd
+.
+.endtemplate

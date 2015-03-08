@@ -1,0 +1,18 @@
+.template 1
+.
+#!/bin/bash
+
+.copyleft()
+
+pushd $(global.build_path:)
+
+virtualenv$(project.python_version) .
+source bin/activate
+
+\./run.sh
+
+deactivate
+
+popd
+.
+.endtemplate
