@@ -1,11 +1,13 @@
 .template 1
 .
-.for projectnode.protocol_node as pn
-. if defined(pn.binary) & pn.binary = "True"
+.#for projectnode.protocol_node as pn
+.# if defined(pn.binary) & pn.binary = "True"
+.if defined(projectnode.binary) & projectnode.binary = "True"
 #!/usr/bin/env python$(project.python_version)
 
-. endif
-.endfor
+.endif
+.# endif
+.#endfor
 .
 .file__copyleft()
 
