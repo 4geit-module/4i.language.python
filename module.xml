@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<module name="4i.language.python" branch="master">
+<module name="4i.language.python" branch="master" description="Primitive 4i module to generate Python code">
   <module name="4i.language" required_branch="master"/>
 
   <gsl from="bootstrap__sh.gsl" output="bootstrap.sh" binary="True"/>
