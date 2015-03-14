@@ -16,18 +16,8 @@
 	<attribute name="operator"/>
 	<attribute name="version"/>
 	<attribute name="variable"/>
-      </node>
-    </node>
-    <node name="module" number="*">
-      <node name="require" number="*" pre_combine="module_require_pre_combine.gsl" debug="True">
-	<attribute name="env"/>
-	<attribute name="dev"/>
-	<attribute name="name" required="True"/>
-	<attribute name="operator"/>
-	<attribute name="version"/>
-	<attribute name="variable"/>
-      </node>
-    </node>
+      </node> <!-- !require -->
+    </node> <!-- !requirements -->
     <node name="output" number="*" pre="output_pre.gsl" post="output_post.gsl" post_end="output_post_end.gsl" dst="#(path)#(name).py" debug="True">
       <attribute name="name" required="True"/>
       <attribute name="binary" type="boolean"/>
@@ -64,6 +54,18 @@
       <node ref=":output"/>
       <node ref=":dir"/>
     </node> <!-- !dir -->
+    <node name="module" number="*">
+      <node name="require" number="*" pre_combine="module_require_pre_combine.gsl" debug="True">
+	<attribute name="env"/>
+	<attribute name="dev"/>
+	<attribute name="name" required="True"/>
+	<attribute name="operator"/>
+	<attribute name="version"/>
+	<attribute name="variable"/>
+      </node> <!-- !require -->
+      <node ref=":output"/>
+      <node ref=":dir"/>
+    </node> <!-- !module -->
   </node> <!-- !project -->
 
   <test>
