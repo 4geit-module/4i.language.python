@@ -17,6 +17,12 @@
 # Caner Candan <caner@candan.fr>, http://caner.candan.fr
 #
 
+projectnode.origin_name = projectnode.name
+projectnode.name = string__convert_variables(projectnode.name, project)
+
+projectnode.origin_version = projectnode.version
+projectnode.version = string__convert_variables(projectnode.version, project)
+
 define projectnode.env = 'pip'
 
 .endtemplate
