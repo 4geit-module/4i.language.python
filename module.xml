@@ -4,7 +4,7 @@
 
   <gsl from="bootstrap__sh.gsl" output="bootstrap.sh" binary="True"/>
   <gsl from="launch__sh.gsl" output="launch.sh" binary="True"/>
-  <gsl from="setup__py.gsl" output="setup.gsl" binary="True"/>
+  <gsl from="setup__py.gsl" output="setup.py" binary="True"/>
   
   <node name="project" pre_check="project_pre_check.gsl" pre="project_pre.gsl">
     <attribute name="python_version" required="True"/>
@@ -68,13 +68,6 @@
     </node> <!-- !module -->
   </node> <!-- !project -->
 
-  <test>
-    <project name="diet">
-      <class name="Diet"/>
-      <class name="Carnism" inherits="Diet"/>
-      <class name="Vegetarism" inherits="Diet"/>
-      <class name="Veganism" inherits="Diet"/>
-      <class name="Raw" inherits="Diet"/>
-    </project>
-  </test>
+  <!-- <test name="add_class" description="add a new class"/> -->
+  <!-- <test name="add_def" description="add a new def"/> -->
 </module>
