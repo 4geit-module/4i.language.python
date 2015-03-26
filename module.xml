@@ -71,6 +71,7 @@
   <test name="output" description="create a python file"/>
   <test name="assets" description="create assets files"/>
   <test name="stmt" description="create a python file with a single statement"/>
-  <!-- <test name="add_class" description="add a new class"/> -->
-  <!-- <test name="add_def" description="add a new def"/> -->
+  <test name="main" description="create a python file with a single main scope"/>
+  <test name="def" description="create a python file with a single function"/>
+  <test name="class" description="create a python file with a single class"/>
 </module>

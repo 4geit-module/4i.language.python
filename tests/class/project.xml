@@ -1,0 +1,31 @@
+<project name="xyz" branch="master">
+  <module name="4i.language.python" required_branch="master"/>
+  <output name="xyz" binary="True">
+    <class name="MyClass">
+      <def name="__init__">
+	<arg name="self"/>
+	<stmt>b = 5</stmt>
+      </def>
+    </class>
+    <class name="MyAbstractClass">
+      <def name="__init__">
+	<arg name="self"/>
+	<arg name="a"/>
+	<arg name="b"/>
+	<arg name="c"/>
+	<stmt>self.a = a</stmt>
+	<stmt>self.b = b</stmt>
+	<stmt>self.c = c</stmt>
+      </def>
+    </class>
+    <class name="MyChildClass" inherits="MyAbstractClass">
+      <def name="__init__">
+	<arg name="self"/>
+	<arg name="a"/>
+	<arg name="b"/>
+	<arg name="c"/>
+	<stmt>super(MyChildClass, self).__init__(a,b,c)</stmt>
+      </def>
+    </class>
+  </output>
+</project>
