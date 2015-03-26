@@ -1,0 +1,3 @@
+<project name="xyz" branch="master">
+  <module name="4i.language.python" required_branch="master"/>
+</project>
