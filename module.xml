@@ -2,6 +2,10 @@
 <module name="4i.language.python" branch="master" description="Primitive 4i module to generate Python code">
   <module name="4i.language" required_branch="master"/>
 
+  <todo>add a requirements test</todo>
+  <todo>add a newline test</todo>
+  <todo>add a comment test</todo>
+  
   <gsl from="bootstrap__sh.gsl" output="bootstrap.sh" binary="True"/>
   <gsl from="launch__sh.gsl" output="launch.sh" binary="True"/>
   <gsl from="setup__py.gsl" output="setup.py" binary="True"/>
