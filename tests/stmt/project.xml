@@ -1,0 +1,6 @@
+<project name="xyz" branch="master">
+  <module name="4i.language.python" required_branch="master"/>
+  <output name="xyz" binary="True">
+    <stmt>a = 1+2</stmt>
+  </output>
+</project>
