@@ -21,7 +21,7 @@
 .template 1
 .
 $(indent())class $(projectnode.name:)\
-.if defined(projectnode.inherits)
+.if defined(projectnode.inherits) & projectnode.inherits <> ""
 ($(projectnode.inherits:))\
 .endif
 :

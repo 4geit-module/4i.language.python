@@ -38,6 +38,14 @@
 	<node ref=":newline"/>
 	<node ref=":comment"/>
       </node> <!-- !def -->
+      <node name="subclass" number="*" pre="class_pre.gsl" post="class_post.gsl" post_end="class_post_end.gsl">
+	<attribute name="name" required="True"/>
+	<attribute name="inherits"/>
+	<node ref=":stmt"/>
+	<node ref=":newline"/>
+	<node ref=":comment"/>
+	<node ref=":def"/>
+      </node> <!-- !subclass -->
       <node name="class" number="*" pre="class_pre.gsl" post="class_post.gsl" post_end="class_post_end.gsl">
 	<attribute name="name" required="True"/>
 	<attribute name="inherits"/>
@@ -45,6 +53,7 @@
 	<node ref=":newline"/>
 	<node ref=":comment"/>
 	<node ref=":def"/>
+	<node ref=":subclass"/>
       </node> <!-- !class -->
       <node name="main" pre="main_pre.gsl" post="main_post.gsl" post_end="main_post_end.gsl" debug="True">
 	<node ref=":stmt"/>
