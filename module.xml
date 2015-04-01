@@ -28,6 +28,10 @@
       <node name="stmt" number="*" pre="stmt_pre.gsl" post="stmt_post.gsl"/>
       <node name="newline" number="*" pre="newline_pre.gsl" post="newline_post.gsl"/>
       <node name="comment" number="*" pre="comment_pre.gsl" post="comment_post.gsl"/>
+      <node name="multicomment" number="*" pre="multicomment_pre.gsl" post="multicomment_post.gsl" post_end="multicomment_post_end.gsl">
+	<node name="line" number="*" post="line_post.gsl"/>
+	<node ref=":newline"/>
+      </node> <!-- !multicomment -->
       <node name="def" number="*" pre="def_pre.gsl" post="def_post.gsl" post_end="def_post_end.gsl">
 	<attribute name="name" required="True"/>
 	<node name="arg" number="*">
@@ -37,6 +41,7 @@
 	<node ref=":stmt"/>
 	<node ref=":newline"/>
 	<node ref=":comment"/>
+	<node ref=":multicomment"/>
       </node> <!-- !def -->
       <node name="subclass" number="*" pre="class_pre.gsl" post="class_post.gsl" post_end="class_post_end.gsl">
 	<attribute name="name" required="True"/>
@@ -44,6 +49,7 @@
 	<node ref=":stmt"/>
 	<node ref=":newline"/>
 	<node ref=":comment"/>
+	<node ref=":multicomment"/>
 	<node ref=":def"/>
       </node> <!-- !subclass -->
       <node name="class" number="*" pre="class_pre.gsl" post="class_post.gsl" post_end="class_post_end.gsl">
@@ -52,6 +58,7 @@
 	<node ref=":stmt"/>
 	<node ref=":newline"/>
 	<node ref=":comment"/>
+	<node ref=":multicomment"/>
 	<node ref=":def"/>
 	<node ref=":subclass"/>
       </node> <!-- !class -->
@@ -59,6 +66,7 @@
 	<node ref=":stmt"/>
 	<node ref=":newline"/>
 	<node ref=":comment"/>
+	<node ref=":multicomment"/>
 	<node ref=":def"/>
 	<node ref=":class"/>
       </node>
