@@ -5,6 +5,7 @@
   <todo>add a requirements test</todo>
   <todo>add a newline test</todo>
   <todo>add a comment test</todo>
+  <todo>add a multicomment test</todo>
   
   <gsl from="bootstrap__sh.gsl" output="bootstrap.sh" binary="True"/>
   <gsl from="launch__sh.gsl" output="launch.sh" binary="True"/>
