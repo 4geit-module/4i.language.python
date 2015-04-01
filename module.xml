@@ -8,6 +8,7 @@
   <todo>add a multicomment test</todo>
   
   <gsl from="bootstrap__sh.gsl" output="bootstrap.sh" binary="True"/>
+  <gsl from="command__sh.gsl" output="command.sh" binary="True"/>
   <gsl from="launch__sh.gsl" output="launch.sh" binary="True"/>
   <gsl from="setup__py.gsl" output="setup.py" binary="True"/>
   
